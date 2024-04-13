@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>小馄饨和小西瓜的网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>欢迎来到小馄饨和小西瓜的网站</h1>
+        <section>
+            <input type="text" id="nameInput" placeholder="输入你的名字">
+            <button onclick="greetUser()">给小猫咪们打个招呼吧</button>
+            <p id="greetingText"></p >
+        </section>    
+    </header>
+    <section>
+        <h2>这个是小馄饨</h2>
+        <img src="images/xiaohuntun.jpg" alt="小馄饨的照片">
+        <p>小馄饨是一只非常活泼可爱喜欢捣乱开水龙头的猫咪。</p >
+    </section>
+    <section>
+        <h2>小西瓜</h2>
+        <img src="images/xiaoxigua.jpg" alt="小西瓜的照片">
+        <p>小西瓜是一只温柔而宁静有点笨笨喜欢尿床的猫咪。</p >
+    </section>
+    <footer>      
+    <script>
+        function greetUser() {
+            const name = document.getElementById('nameInput').value;
+            const greetingArea = document.getElementById('greetingText');
+            if (name) {
+                greetingArea.innerHTML = `你好，${name}！欢迎来到小馄饨和小西瓜的小天地！`;
+            } else {
+                greetingArea.innerHTML = "你好！请告诉我你的名字！";
+            }
+        }
+        </script>
+           <p> 2024 小馄饨与小西瓜。版权归徐大义所有。</p >
+           </footer>       
+</body>
+</html>
